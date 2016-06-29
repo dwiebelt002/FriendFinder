@@ -1,40 +1,75 @@
-var friends = require('../data/friends.js');
-var path = require('path');
+// API Routes
+// =============================================================
+
+// First, load the data from friends.js
+var friendsList = require('../data/friends.js');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 
-// ===============================================================================
-// ROUTING
-// ===============================================================================
+// Creating Routes
+module.exports = function(app) {
 
-module.exports = function(app){
-
-	app.use(bodyParser.json());
-	app.use(bodyParser.urlencoded({extended: true}));
-	app.use(bodyParser.text());
-	app.use(bodyParser.json({type:'application/vnd.api+json'}));
-
-	// API GET Requests
-	// Below code handles when users "visit" a page. 
-	// In each of the below cases when a user visits a link 
-	// (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table) 
-	// ---------------------------------------------------------------------------
-
+	// Search for Specific Character (or all characters) - provides JSON
 	app.get('/api/friends', function(req, res){
-		res.json(userData);
+		res.status(200).json({message: 'connected.'})
+		res.json(friendsList);
 	});
 
-	// API POST Requests
-	// Below code handles when a user submits a form and thus submits data to the server.
-	// In each of the below cases, when a user submits form data (a JSON object)
-	// ...the JSON is pushed to the appropriate Javascript array
-	// (ex. User fills out a reservation request... this data is then sent to the server...
-	// Then the server saves the data to the userData array)
-	// ---------------------------------------------------------------------------
-
+	// Create New Characters - takes in JSON input
 	app.post('/api/friends', function(req, res){
-		userData.push(req.body);
-		res.json(); // KEY LINE
+		//res.json(true);
+		//console.log(req.body);
+		//console.log(friendsList);
+
+		//functions to return best match
+		var bestMatch = {
+			'name': 'none',
+			'photo': 'none'
+		};
+
+		function sum (array) {
+			var total = 0;
+			for (var n = 0; n < array.length; n++) {
+				total += parseInt(array[n]);
+				//console.log(array[n]);
+				//console.log(parseInt(total));
+			}
+			return total;
+		}
+
+		var userTotal = sum(req.body.scores);
+
+
+		console.log(userTotal);
+
+		var friendTotal = 0;
+
+		for (var i = 0; i < friendsList.length; i++) {
+			friendTotal = sum(friendsList[i].scores);
+			//console.log(friendTotal);
+			if (friendTotal == userTotal) {
+				bestMatch.name = friendsList[i].name;
+				bestMatch.photo = friendsList[i].photo;
+			}
+		};
+
+		if (bestMatch.name == 'none') {
+			var closest = 50;
+
+			for (var i = 0; i < friendsList.length; i++) {
+				friendTotal = sum(friendsList[i].scores);
+				var difference = Math.abs(friendTotal - userTotal);
+				if ( difference <= closest ){
+					closest = difference;
+					bestMatch.name = friendsList[i].name;
+					bestMatch.photo = friendsList[i].photo;
+				};
+			};
+		};
+		console.log(bestMatch);
+		res.json(bestMatch);
+
 	});
 
-}
+};
