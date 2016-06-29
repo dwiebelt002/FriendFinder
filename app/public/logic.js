@@ -16,3 +16,12 @@ $(".submit").on("click", function(){
 	}
 
 })
+
+function runFriendsQuery(){
+	var currentURL = window.location.origin;
+
+	$.ajax({url:currentURL + "/api/friends", method: "GET"})
+	.done(function(friends){
+		
+	})
+}
