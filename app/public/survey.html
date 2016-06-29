@@ -1,172 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>Survey Page</title>
-
-	<!--Favicon -->
-	<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAARGFwAP///wCEweMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMiIzAAAAAAMiIiMAAAADMyAgIzMAAAEwAgIAMQAAAwAAIAADAAABAAAAAAEAAAAzMTEzMAAAADMAAAAwAAAAMAAAAzAAAAAwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAPgPAADwBwAA4AMAAMABAADAAQAAwAEAAMABAADgAwAA4AMAAOHDAADj4wAA9/cAAP//AAD//wAA" rel="icon" type="image/x-icon" />
+	<title>Friend Finder</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-</head>
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
+	<!-- Chosen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
 <body>
 	<div class="container">
-	
-	<h2>Survey Questions</h2>
-	<hr>
-	<h3>
-		<strong>About You</strong>
-	</h3>
+		<h2>Survey Questions</h2>
+		<hr>
 
-	<h4>Name (Required)</h4>
-	<input type="text" name id="name" class="form-control" required>
+		<h3><strong>About You</strong></h3>
+		<h4>Name (Required)</h4>
+		<input type="text" name="" id="name" class="form-control" required >
 
-	<h4>Link to Photo Image (Required)</h4>
-	<input type="text" name id="name" class="form-control" required>
-	<hr>
+		<h4>Link to Photo (Required)</h4>
+		<input type="text" name="" id="photo" class="form-control" required>
 
+		<hr>
 
 		<div class="row">
 		<div class="btn-group" data-toggle="buttons" id="q1">
 		<h3><strong>Question 1</strong></h3>
 		<h4>You love adventures. Everyday holds an opportunity to break the normal routine and live spontaniously.</h4>
-		<label class="radio-inline q1"><input type="radio" value="1" name="options1">1 Strongly Disagree</label>
-		<label class="radio-inline q1"><input type="radio" value="2" name="options1">2 Disagree</label>
-		<label class="radio-inline q1"><input type="radio" value="3" name="options1">3 Neutral</label>
-		<label class="radio-inline q1"><input type="radio" value="4" name="options1">4 Agree</label>
-		<label class="radio-inline q1"><input type="radio" value="5" name="options1">5 Strongly Agree</label>
+		<label class="radio-inline q1"><input type="radio" value="1" name="optradio1">1 Strongly Disagree</label>
+		<label class="radio-inline q1"><input type="radio" value="2" name="optradio1">2 Disagree</label>
+		<label class="radio-inline q1"><input type="radio" value="3" name="optradio1">3 Neutral</label>
+		<label class="radio-inline q1"><input type="radio" value="4" name="optradio1">4 Agree</label>
+		<label class="radio-inline q1"><input type="radio" value="5" name="optradio1">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q2">
 		<h3><strong>Question 2</strong></h3>
 		<h4>You consider yourself athletic. You work out often.</h4>
-		<label class="radio-inline q2"><input type="radio" value="1" name="options2">1 Strongly Disagree</label>
-		<label class="radio-inline q2"><input type="radio" value="2" name="options2">2 Disagree</label>
-		<label class="radio-inline q2"><input type="radio" value="3" name="options2">3 Neutral</label>
-		<label class="radio-inline q2"><input type="radio" value="4" name="options2">4 Agree</label>
-		<label class="radio-inline q2"><input type="radio" value="5" name="options2">5 Strongly Agree</label>
+		<label class="radio-inline q2"><input type="radio" value="1" name="optradio2">1 Strongly Disagree</label>
+		<label class="radio-inline q2"><input type="radio" value="2" name="optradio2">2 Disagree</label>
+		<label class="radio-inline q2"><input type="radio" value="3" name="optradio2">3 Neutral</label>
+		<label class="radio-inline q2"><input type="radio" value="4" name="optradio2">4 Agree</label>
+		<label class="radio-inline q2"><input type="radio" value="5" name="optradio2">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
-
+		
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q3">
 		<h3><strong>Question 3</strong></h3>
-		<h4>Beauty and the right sense of fashion are very important to you</h4>
-		<label class="radio-inline q3"><input type="radio" value="1" name="options3">1 Strongly Disagree</label>
-		<label class="radio-inline q3"><input type="radio" value="2" name="options3">2 Disagree</label>
-		<label class="radio-inline q3"><input type="radio" value="3" name="options3">3 Neutral</label>
-		<label class="radio-inline q3"><input type="radio" value="4" name="options3">4 Agree</label>
-		<label class="radio-inline q3"><input type="radio" value="5" name="options3">5 Strongly Agree</label>
+		<h4>Beauty and the right sense of fashion are very important to you.</h4>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio3">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio3">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio3">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio3">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio3">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q4">
 		<h3><strong>Question 4</strong></h3>
 		<h4>Your idea of a good time during the weekend is a day inside relaxing and watching Netflix.</h4>
-		<label class="radio-inline q4"><input type="radio" value="1" name="options4">1 Strongly Disagree</label>
-		<label class="radio-inline q4"><input type="radio" value="2" name="options4">2 Disagree</label>
-		<label class="radio-inline q4"><input type="radio" value="3" name="options4">3 Neutral</label>
-		<label class="radio-inline q4"><input type="radio" value="4" name="options4">4 Agree</label>
-		<label class="radio-inline q4"><input type="radio" value="5" name="options4">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio4">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio4">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio4">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio4">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio4">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q5">
 		<h3><strong>Question 5</strong></h3>
 		<h4>When you go out with friends, you often like to drink.</h4>
-		<label class="radio-inline q5"><input type="radio" value="1" name="options5">1 Strongly Disagree</label>
-		<label class="radio-inline q5"><input type="radio" value="2" name="options5">2 Disagree</label>
-		<label class="radio-inline q5"><input type="radio" value="3" name="options5">3 Neutral</label>
-		<label class="radio-inline q5"><input type="radio" value="4" name="options5">4 Agree</label>
-		<label class="radio-inline q5"><input type="radio" value="5" name="options5">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio5">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio5">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio5">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio5">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio5">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q6">
 		<h3><strong>Question 6</strong></h3>
 		<h4>You love to travel. You want to see as many places as you can.</h4>
-		<label class="radio-inline q6"><input type="radio" value="1" name="options6">1 Strongly Disagree</label>
-		<label class="radio-inline q6"><input type="radio" value="2" name="options6">2 Disagree</label>
-		<label class="radio-inline q6"><input type="radio" value="3" name="options6">3 Neutral</label>
-		<label class="radio-inline q6"><input type="radio" value="4" name="options6">4 Agree</label>
-		<label class="radio-inline q6"><input type="radio" value="5" name="options6">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio6">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio6">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio6">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio6">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio6">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q7">
 		<h3><strong>Question 7</strong></h3>
 		<h4>You consider yourself to be a happy and successful person.</h4>
-		<label class="radio-inline q7"><input type="radio" value="1" name="options7">1 Strongly Disagree</label>
-		<label class="radio-inline q7"><input type="radio" value="2" name="options7">2 Disagree</label>
-		<label class="radio-inline q7"><input type="radio" value="3" name="options7">3 Neutral</label>
-		<label class="radio-inline q7"><input type="radio" value="4" name="options7">4 Agree</label>
-		<label class="radio-inline q7"><input type="radio" value="5" name="options7">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio7">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio7">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio7">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio7">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio7">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q8">
 		<h3><strong>Question 8</strong></h3>
 		<h4>You love trying new types of food. The crazier and more unique the recipie, the more you want to try it.</h4>
-		<label class="radio-inline q8"><input type="radio" value="1" name="options8">1 Strongly Disagree</label>
-		<label class="radio-inline q8"><input type="radio" value="2" name="options8">2 Disagree</label>
-		<label class="radio-inline q8"><input type="radio" value="3" name="options8">3 Neutral</label>
-		<label class="radio-inline q8"><input type="radio" value="4" name="options8">4 Agree</label>
-		<label class="radio-inline q8"><input type="radio" value="5" name="options8">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio8">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio8">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio8">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio8">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio8">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
-
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q9">
 		<h3><strong>Question 9</strong></h3>
 		<h4>You like to hang out with large groups of people.</h4>
-		<label class="radio-inline q9"><input type="radio" value="1" name="options9">1 Strongly Disagree</label>
-		<label class="radio-inline q9"><input type="radio" value="2" name="options9">2 Disagree</label>
-		<label class="radio-inline q9"><input type="radio" value="3" name="options9">3 Neutral</label>
-		<label class="radio-inline q9"><input type="radio" value="4" name="options9">4 Agree</label>
-		<label class="radio-inline q9"><input type="radio" value="5" name="options9">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio9">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio9">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio9">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio9">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio9">5 Strongly Agree</label>
 		</div>
 		</div>
 		<br>
 
 		<div class="row">
-		<div class="btn-group" data-toggle="buttons" id="q1">
+		<div class="btn-group" data-toggle="buttons" id="q10">
 		<h3><strong>Question 10</strong></h3>
 		<h4>You are willing to learn new hobbies and new skills.</h4>
-		<label class="radio-inline q10"><input type="radio" value="1" name="options10">1 Strongly Disagree</label>
-		<label class="radio-inline q10"><input type="radio" value="2" name="options10">2 Disagree</label>
-		<label class="radio-inline q10"><input type="radio" value="3" name="options10">3 Neutral</label>
-		<label class="radio-inline q10"><input type="radio" value="4" name="options10">4 Agree</label>
-		<label class="radio-inline q10"><input type="radio" value="5" name="options10">5 Strongly Agree</label>
+		<label class="radio-inline"><input type="radio" value="1" name="optradio10">1 Strongly Disagree</label>
+		<label class="radio-inline"><input type="radio" value="2" name="optradio10">2 Disagree</label>
+		<label class="radio-inline"><input type="radio" value="3" name="optradio10">3 Neutral</label>
+		<label class="radio-inline"><input type="radio" value="4" name="optradio10">4 Agree</label>
+		<label class="radio-inline"><input type="radio" value="5" name="optradio10">5 Strongly Agree</label>
 		</div>
 		</div>
+
+		<br>
 		<br>
 
 		<!-- Submit Button -->
 		<button type="submit" class="btn btn-primary btn-lg btn-block" id="Submit">Submit</button>
-		<br>
 
-		<!-- Modal -->
+		<hr>
+	    <footer class="footer">
+	      <div class="container">
+		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jcruey/Friend-finder">GitHub Repo</a></p>
+	      </div>
+	    </footer>
+
+	</div>
+
+	<!-- Modal -->
 	<div id="resultsModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
@@ -178,7 +186,7 @@
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="http://www.startrek.com/legacy_media/images/200307/spock01/320x240.jpg" alt="">
+	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -189,15 +197,67 @@
 	</div>
 
 
-		<footer class="footer">
-      	<div class="container">
-	    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/dwiebelt002/FriendFinder">GitHub Repo</a></p>
-      	</div>
-  		</footer>
-		</div>
+	<script type="text/javascript">
+	// Chosen CSS
+    var config = {
+      '.optradio'           : {},
+      '.optradio-deselect'  : {allow_single_deselect:true},
+      '.optradio-no-single' : {disable_search_threshold:10},
+      '.optradio-no-results': {no_results_text:'Oops, nothing found!'},
+      '.optradio-width'     : {width:"95%"}
+    }
+    for (var optradio in config) {
+      $(optradio).chosen(config[optradio]);
+    }
+	
+	// Capture the form inputs
+	
+    $("#Submit").on("click", function(){
+    	// Form validation
+    	function validateForm() {
+		  var isValid = true;
+		  $('.form-control').each(function() {
+		    if ( $(this).val() === '' )
+		        isValid = false;
+		  });
+		  $('.optradio').each(function() {
+		  	if( $(this).val() === "")
+		  		isValid = false
+		  })
+		  return isValid;
+		}
+		// If all required fields are filled
+		if (validateForm() == true) {
+			// Create an object for the user's data
+	    	var userData = {
+	    		name: $("#name").val(),
+	    		photo: $("#photo").val(),
+	    		scores: [$("input[name=optradio1]:checked").val(), $("input[name=optradio2]:checked").val(), $("input[name=optradio3]:checked").val(), $("input[name=optradio4]:checked").val(), $("input[name=optradio5]:checked").val(), $("input[name=optradio6]:checked").val(), $("input[name=optradio7]:checked").val(), $("input[name=optradio8]:checked").val(), $("input[name=optradio9]:checked").val(), $("input[name=optradio10]:checked").val(), ]}
+	    	console.log(userData);
+	    
+    	// Grab the URL of the website
+	    	var currentURL = window.location.origin;
+	    	
+	    	// AJAX post the data to the friends API. 
+	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+	    		$("#matchName").text(data.name);
+	    		$('#matchImg').attr("src", data.photo);
+		    	// Show the modal with the best match 
+		    	$("#resultsModal").modal('toggle');
+	    	});
+		}
+		else
+		{
+			alert("Please fill out all fields before submitting!");
+		}
+    	
+    	return false;
+    });	
+	</script>
 
-<script src="app/public/logic.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+
 
 </body>
 </html>
